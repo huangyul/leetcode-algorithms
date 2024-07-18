@@ -1,4 +1,4 @@
-package dichotomysearch
+package no704
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestSearch(t *testing.T) {
+func TestAl(t *testing.T) {
 	testCases := []struct {
 		name   string
 		nums   []int
