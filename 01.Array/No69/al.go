@@ -1,0 +1,39 @@
+package no69
+
+// 给你一个非负整数 x ，计算并返回 x 的 算术平方根 。
+
+// 由于返回类型是整数，结果只保留 整数部分 ，小数部分将被 舍去 。
+
+// 注意：不允许使用任何内置指数函数和算符，例如 pow(x, 0.5) 或者 x ** 0.5 。
+
+// 示例 1：
+
+// 输入：x = 4
+// 输出：2
+// 示例 2：
+
+// 输入：x = 8
+// 输出：2
+// 解释：8 的算术平方根是 2.82842..., 由于返回类型是整数，小数部分将被舍去。
+
+// 解题思路：使用二分法
+// 设定从1到x都有可能是x的算术平分根，然后使用二分法算出来，如果最后结果的乘积比x大，则需要减一
+
+func mySqrt(x int) int {
+	left, right := 1, x
+	for left <= right {
+		mid := left + (right-left)/2
+		if mid*mid == x {
+			return mid
+		} else if mid*mid > x {
+			right = mid - 1
+		} else {
+			left = mid + 1
+		}
+	}
+	if left*left > x {
+		return left - 1
+	} else {
+		return left
+	}
+}

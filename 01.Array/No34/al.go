@@ -22,7 +22,7 @@ package no34
 func searchRange(nums []int, target int) []int {
 	left, right := 0, len(nums)-1
 	for left <= right {
-		mid := (left + right) / 2
+		mid := left + (right-left)/2
 		n := nums[mid]
 		if n == target {
 			start := mid - 1
