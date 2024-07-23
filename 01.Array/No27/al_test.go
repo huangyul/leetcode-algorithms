@@ -13,18 +13,18 @@ func TestAl(t *testing.T) {
 		val  int
 		res  int
 	}{
-		// {
-		// 	name: "test 1",
-		// 	nums: []int{3, 2, 2, 3},
-		// 	val:  3,
-		// 	res:  2,
-		// },
-		// {
-		// 	name: "test 2",
-		// 	nums: []int{0, 1, 2, 2, 3, 0, 4, 2},
-		// 	val:  2,
-		// 	res:  5,
-		// },
+		{
+			name: "test 1",
+			nums: []int{3, 2, 2, 3},
+			val:  3,
+			res:  2,
+		},
+		{
+			name: "test 2",
+			nums: []int{0, 1, 2, 2, 3, 0, 4, 2},
+			val:  2,
+			res:  5,
+		},
 		{
 			name: "test 3",
 			nums: []int{0, 1, 2, 2, 3, 0, 4, 2},
